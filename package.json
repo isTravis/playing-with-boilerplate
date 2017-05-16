@@ -14,7 +14,7 @@
     "prod": "serve ./dist -s",
     "start": "webpack-dev-server --config webpack/webpackConfigDev.js"
   },
-  "dependencies": {
+  "devDependencies": {
     "babel-core": "^6.24.1",
     "babel-eslint": "^7.2.3",
     "babel-loader": "^7.0.0",
@@ -36,6 +36,13 @@
     "html-webpack-plugin": "^2.24.1",
     "node-sass": "^4.5.2",
     "prop-types": "^15.5.10",
+    "sass-loader": "^6.0.5",
+    "serve": "^5.1.5",
+    "style-loader": "^0.17.0",
+    "webpack": "^2.5.1",
+    "webpack-dev-server": "^2.4.5"
+  },
+  "dependencies": {
     "react": "^15.5.4",
     "react-code-splitting": "^1.1.1",
     "react-dom": "^15.5.4",
@@ -44,11 +51,6 @@
     "react-router-dom": "^4.1.1",
     "redux": "^3.5.2",
     "redux-thunk": "^2.2.0",
-    "sass-loader": "^6.0.5",
-    "serve": "^5.1.5",
-    "style-loader": "^0.17.0",
-    "webpack": "^2.5.1",
-    "webpack-dev-server": "^2.4.5"
   },
   "engines": {
     "node": "6.2.2"

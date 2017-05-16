@@ -13,8 +13,11 @@ module.exports = {
 	entry: {
 		main: resolve(__dirname, '../app'),
 		vendor: [
+			'prop-types',
 			'react',
+			'react-code-splitting',
 			'react-dom',
+			'react-helmet',
 			'react-redux',
 			'react-router-dom',
 			'redux',
