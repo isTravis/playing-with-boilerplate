@@ -10,7 +10,7 @@
     "url": "https://github.com/isTravis/react-app-starter.git"
   },
   "scripts": {
-    "build": "rm -rf dist && webpack --config webpack/webpackConfigProd.js  && cp -a static/ dist/ || mv _redirects-prod dist/_redirects",
+    "build": "rm -rf dist && webpack --config webpack/webpackConfigProd.js  && cp -a static/ dist/ && mv _redirects-prod dist/_redirects",
     "prod": "serve ./dist -s",
     "start": "webpack-dev-server --config webpack/webpackConfigDev.js"
   },
