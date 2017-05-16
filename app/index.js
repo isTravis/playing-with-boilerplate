@@ -4,8 +4,8 @@ import { Provider } from 'react-redux';
 import { render } from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
 
-import App from './components/App';
-import ManageScroll from './components/ManageScroll';
+import App from 'components/App';
+import ManageScroll from 'components/ManageScroll';
 import store from './store';
 
 // if (process.env.NODE_ENV === 'production') Offline.install()

@@ -11,6 +11,7 @@ const Landing = function({ appData }) {
 				<li>1</li><li>1</li><li>1</li><li>1</li><li>1</li><li>1</li><li>1</li><li>1</li><li>1</li>
 				<li>2</li><li>2</li><li>2</li><li>2</li><li>2</li><li>2</li><li>2</li><li>2</li><li>2</li>
 				<li>3</li><li>3</li><li>3</li><li>3</li><li>3</li><li>3</li><li>3</li><li>3</li><li>3</li>
+				<img src={'images/icon.png'} />
 			</ul>
 		</div>
 	);

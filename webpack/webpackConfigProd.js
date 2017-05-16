@@ -20,6 +20,9 @@ module.exports = {
 			'redux-thunk',
 		],
 	},
+	resolve: {
+		modules: [resolve(__dirname, '../app'), 'node_modules']
+	},
 	devtool: '#source-map',
 	output: {
 		filename: '[name].[chunkhash].js',

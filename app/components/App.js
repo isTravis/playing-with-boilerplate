@@ -7,11 +7,13 @@ import Async from 'react-code-splitting';
 
 require('./app.scss');
 
-const Landing = () => <Async load={import('./Landing')} />;
-const About = () => <Async load={import('./About')} />;
+const Landing = () => <Async load={import('components/Landing')} />;
+const About = () => <Async load={import('components/About')} />;
+const NavBar = () => <Async load={import('components/NavBar')} />;
 
 // const App = ({ appData }) => {
 const App = function({ appData }) {
+
 	return (
 		<div>
 			<Helmet>
@@ -19,10 +21,12 @@ const App = function({ appData }) {
 				<meta name="description" content="A React Starter Site Template" />
 			</Helmet>
 
+			<NavBar />
 			<ul>
 				<li><Link to={'/'}>Home</Link></li>
 				<li><Link to={'/about'}>About</Link></li>
 			</ul>
+
 
 			<Route exact path="/" component={Landing} />
 			<Route path="/about" component={About} />
@@ -32,6 +36,7 @@ const App = function({ appData }) {
 
 App.propTypes = {
 	appData: PropTypes.shape({}).isRequired,
+	dispatch: PropTypes.func,
 };
 
 export default withRouter(connect(state => ({ appData: state.app }))(App));

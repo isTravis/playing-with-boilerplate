@@ -10,7 +10,7 @@
     "url": "https://github.com/isTravis/react-app-starter.git"
   },
   "scripts": {
-    "build": "rm -rf dist && webpack --config webpack/webpackConfigProd.js && cp -Rv static/* dist && cp _redirects-prod dist/_redirects",
+    "build": "rm -rf dist && webpack --config webpack/webpackConfigProd.js && cp -R static/* dist && cp _redirects-prod dist/_redirects",
     "prod": "serve ./dist -s",
     "start": "webpack-dev-server --config webpack/webpackConfigDev.js"
   },
@@ -23,6 +23,7 @@
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
     "babel-runtime": "^6.23.0",
+    "copy-webpack-plugin": "^4.0.1",
     "css-loader": "^0.28.1",
     "eslint": "^3.19.0",
     "eslint-config-airbnb": "^14.0.0",
