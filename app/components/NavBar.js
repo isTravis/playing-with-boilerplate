@@ -4,6 +4,8 @@ import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 import { getData } from 'actions/app';
 
+require('./navbar.scss');
+
 class NavBar extends Component {
 	componentWillMount() {
 		this.props.dispatch(getData());
@@ -11,7 +13,7 @@ class NavBar extends Component {
 
 	render() {
 		return (
-			<div>Nav Bar</div>
+			<div id="navbar-page">Nav Bar</div>
 		);
 	}
 }
