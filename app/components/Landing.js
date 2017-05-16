@@ -2,9 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
+require('./landing.scss');
+
 const Landing = function({ appData }) {
 	return (
-		<div>
+		<div id={'landing-page'}>
 			<h1>This is my Landing Page!!</h1>
 			<div>{JSON.stringify(appData)}</div>
 			<ul>

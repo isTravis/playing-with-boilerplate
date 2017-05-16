@@ -6,6 +6,7 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 const extractSass = new ExtractTextPlugin({
 	filename: '[name].[contenthash].css',
+	allChunks: true,
 });
 
 module.exports = {
