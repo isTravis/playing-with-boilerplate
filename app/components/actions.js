@@ -1,4 +1,4 @@
-import { apiFetch } from 'utilities';
+import { apiFetch } from '../utilities';
 
 /*--------*/
 // Define Action types

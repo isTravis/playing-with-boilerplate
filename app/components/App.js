@@ -13,7 +13,6 @@ const NavBar = () => <Async load={import('components/NavBar')} />;
 
 // const App = ({ appData }) => {
 const App = function({ appData }) {
-
 	return (
 		<div>
 			<Helmet>

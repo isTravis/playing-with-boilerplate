@@ -4,7 +4,7 @@ export const apiFetch = function(path, opts) {
 	const urlPrefix = 'https://dev.pubpub.org';
 	// const finalRoute = urlPrefix + path;
 	const finalRoute = 'https://api.github.com/users/isTravis/orgs';
-	
+
 	return fetch(finalRoute, {
 		...opts,
 		// credentials: 'include',
