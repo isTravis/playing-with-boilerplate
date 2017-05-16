@@ -4,12 +4,12 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { Route, withRouter, Link } from 'react-router-dom';
 import Async from 'react-code-splitting';
+import NavBar from 'components/NavBar';
 
 require('./app.scss');
 
 const Landing = () => <Async load={import('components/Landing')} />;
 const About = () => <Async load={import('components/About')} />;
-const NavBar = () => <Async load={import('components/NavBar')} />;
 
 // const App = ({ appData }) => {
 const App = function({ appData }) {
