@@ -7,7 +7,7 @@ require('./landing.scss');
 const Landing = function({ appData }) {
 	return (
 		<div id={'landing-page'}>
-			<h1>This is my Landing Page. 9</h1>
+			<h1>This is my Landing Page. 10</h1>
 			<div className={'wrap'}>{JSON.stringify(appData)}</div>
 			<ul>
 				<li>1</li><li>1</li><li>1</li><li>1</li><li>1</li><li>1</li><li>1</li><li>1</li><li>1</li>
