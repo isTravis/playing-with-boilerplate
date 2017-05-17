@@ -78,13 +78,24 @@ module.exports = {
 			cacheId: 'my-project-name',
 			filename: 'service-worker.js', // This name is referenced in manageServiceWorker.js
 			maximumFileSizeToCacheInBytes: 4194304,
-			// minify: true,
+			minify: true,
 			staticFileGlobs: [
 				'static/**.*',
 				'static/images/**.*',
 			],
 			stripPrefix: 'static/',
 			mergeStaticsConfig: true, // Merge webpacks static outputs with the globs described above.
+			runtimeCaching: [{
+				urlPattern: /^https:\/\/api\.github\.com\//,
+				handler: 'networkFirst',
+				networkTimeoutSeconds: 5000,
+				options: {
+					cache: {
+						maxEntries: 10,
+						name: 'github-api-cache'
+					}
+				}
+			}]
 		}),
 	],
 };

@@ -1,0 +1,16 @@
+{
+  "name": "Sample Site Architecture",
+  "short_name": "Sample Site",
+  "lang": "en-US",
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#60C8FF",
+  "background_color": "#FFFFFF",
+  "icons": [
+    {
+      "src": "icon.png",
+      "sizes": "72x72 96x96 128x128 192x192 256x256 512x512 1024x1024",
+      "type": "image/png"
+    }
+  ]
+}
