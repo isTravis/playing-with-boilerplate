@@ -9,7 +9,8 @@ import NavBar from 'components/NavBar';
 require('./app.scss');
 
 const Landing = () => <Async load={import('components/Landing')} />;
-const About = () => <Async load={import('components/About')} />;
+const Waves = () => <Async load={import('components/Waves')} />;
+const Forests = () => <Async load={import('components/Forests')} />;
 
 // const App = ({ appData }) => {
 const App = function({ appData }) {
@@ -21,13 +22,10 @@ const App = function({ appData }) {
 			</Helmet>
 
 			<NavBar />
-			<ul>
-				<li><Link to={'/'}>Home</Link></li>
-				<li><Link to={'/about'}>About</Link></li>
-			</ul>
 
 			<Route exact path="/" component={Landing} />
-			<Route path="/about" component={About} />
+			<Route path="/waves" component={Waves} />
+			<Route path="/forests" component={Forests} />
 		</div>
 	);
 };

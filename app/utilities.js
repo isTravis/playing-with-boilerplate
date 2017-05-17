@@ -3,7 +3,7 @@
 export const apiFetch = function(path, opts) {
 	const urlPrefix = 'https://dev.pubpub.org';
 	// const finalRoute = urlPrefix + path;
-	const finalRoute = 'https://api.github.com/users/isTravis/orgs';
+	const finalRoute = `https://api.github.com/users/${path}/orgs`;
 
 	return fetch(finalRoute, {
 		...opts,

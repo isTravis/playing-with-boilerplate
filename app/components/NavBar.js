@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { withRouter } from 'react-router-dom';
+import { withRouter, Link } from 'react-router-dom';
 import { getData } from 'actions/app';
 
 require('./navbar.scss');
 
 class NavBar extends Component {
-	componentWillMount() {
-		this.props.dispatch(getData());
-	}
+	// componentWillMount() {
+	// 	this.props.dispatch(getData());
+	// }
 
 	render() {
 		const toggleSlide = function() {
@@ -23,7 +23,8 @@ class NavBar extends Component {
 
 		return (
 			<div id="navbar-page">
-				<div onClick={toggleSlide}>Nav Bar</div>
+				<div onClick={toggleSlide} style={{ display: 'inline-block', padding: '0em 2em' }}>Open Knowledge</div>
+				<Link to={'/'}>Home</Link>
 				<div className={'nav-menu'} onClick={toggleSlide}>
 					<div className={'content'}>
 						<ul>

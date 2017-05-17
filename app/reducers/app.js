@@ -19,8 +19,8 @@ const defaultState = {
 /* ----------------------------------------- */
 export default function reducer(state = defaultState, action) {
 	switch (action.type) {
-	// case LOGIN_GET_FAIL:
-		// return state.set('loginFinished', true);
+	case LOGIN_GET_LOAD:
+		return {};
 	case LOGIN_GET_SUCCESS:
 		return {
 			appData: action.result,

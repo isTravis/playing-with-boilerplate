@@ -17,10 +17,10 @@ export const LOGIN_GET_FAIL = 'app/LOGIN_GET_FAIL';
 // action objects (e.g. {type:example, payload:data} ) within dispatch()
 // function calls
 /*--------*/
-export function getData() {
+export function getData(user) {
 	return (dispatch) => {
 		dispatch({ type: LOGIN_GET_LOAD });
-		return apiFetch('/api/pub?slug=designandscience')
+		return apiFetch(user)
 		.then((result) => {
 			dispatch({ type: LOGIN_GET_SUCCESS, result });
 		})

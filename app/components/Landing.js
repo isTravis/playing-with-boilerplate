@@ -1,20 +1,26 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 
 require('./landing.scss');
 
 const Landing = function({ appData }) {
 	return (
 		<div id={'landing-page'}>
-			<h1>This is my Landing Page. 10</h1>
-			<div className={'wrap'}>{JSON.stringify(appData)}</div>
-			<ul>
-				<li>1</li><li>1</li><li>1</li><li>1</li><li>1</li><li>1</li><li>1</li><li>1</li><li>1</li>
-				<li>2</li><li>2</li><li>2</li><li>2</li><li>2</li><li>2</li><li>2</li><li>2</li><li>2</li>
-				<li>3</li><li>3</li><li>3</li><li>3</li><li>3</li><li>3</li><li>3</li><li>3</li><li>3</li>
-				<img src={'images/icon.png'} alt={'Monkey icon'} />
-			</ul>
+			<Link to={'/waves'}>
+				<div className={'card'}>
+					<span className={'title'}>Tidal Waves</span>
+					<img src={'images/waves.png'} alt={'waves'} />
+				</div>
+			</Link>
+
+			<Link to={'/forests'}>
+				<div className={'card'}>
+					<span className={'title'}>Forests</span>
+					<img src={'images/forest.jpg'} alt={'forests'} />
+				</div>
+			</Link>
 		</div>
 	);
 };
