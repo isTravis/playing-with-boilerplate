@@ -87,7 +87,7 @@ module.exports = {
 			mergeStaticsConfig: true, // Merge webpacks static outputs with the globs described above.
 			runtimeCaching: [{
 				urlPattern: /^https:\/\/api\.github\.com\//,
-				handler: 'networkFirst',
+				handler: 'fastest',
 				networkTimeoutSeconds: 5000,
 				options: {
 					cache: {
