@@ -8,7 +8,7 @@ import App from 'components/App';
 import ManageScroll from 'components/ManageScroll';
 import store from './store';
 
-// if (process.env.NODE_ENV === 'production') Offline.install()
+require('./manageServiceWorker');
 
 const Root = () => (
 	<Provider store={store}>

@@ -3,6 +3,7 @@ const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 // const OfflinePlugin = require('offline-plugin')
+const SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin');
 
 const extractSass = new ExtractTextPlugin({
 	filename: '[name].[contenthash].css',
@@ -73,6 +74,12 @@ module.exports = {
 			filename: 'index.html',
 			title: 'redux-react-starter',
 			template: 'webpack/template.html',
+		}),
+		new SWPrecacheWebpackPlugin({
+			cacheId: 'my-project-name',
+			filename: 'my-service-worker.js',
+			maximumFileSizeToCacheInBytes: 4194304,
+			minify: false,
 		}),
 		// new OfflinePlugin({
 		//   ServiceWorker: {
