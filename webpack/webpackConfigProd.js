@@ -79,6 +79,7 @@ module.exports = {
 			filename: 'service-worker.js', // This name is referenced in manageServiceWorker.js
 			maximumFileSizeToCacheInBytes: 4194304,
 			minify: true,
+			navigateFallback: '/index.html',
 			staticFileGlobs: [
 				'static/**.*',
 				'static/images/**.*',
