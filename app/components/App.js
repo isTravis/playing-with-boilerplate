@@ -26,7 +26,6 @@ const App = function({ appData }) {
 				<li><Link to={'/about'}>About</Link></li>
 			</ul>
 
-
 			<Route exact path="/" component={Landing} />
 			<Route path="/about" component={About} />
 		</div>
