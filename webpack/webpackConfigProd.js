@@ -2,7 +2,6 @@ const { resolve } = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
-// const OfflinePlugin = require('offline-plugin')
 const SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin');
 
 const extractSass = new ExtractTextPlugin({
@@ -77,15 +76,15 @@ module.exports = {
 		}),
 		new SWPrecacheWebpackPlugin({
 			cacheId: 'my-project-name',
-			filename: 'my-service-worker.js',
+			filename: 'service-worker.js', // This name is referenced in manageServiceWorker.js
 			maximumFileSizeToCacheInBytes: 4194304,
-			minify: false,
+			// minify: true,
+			staticFileGlobs: [
+				'static/**.*',
+				'static/images/**.*',
+			],
+			stripPrefix: 'static/',
+			mergeStaticsConfig: true, // Merge webpacks static outputs with the globs described above.
 		}),
-		// new OfflinePlugin({
-		//   ServiceWorker: {
-		//     navigateFallbackURL: '/',
-		//   },
-		//   AppCache: false,
-		// }),
 	],
 };

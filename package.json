@@ -11,7 +11,7 @@
   },
   "scripts": {
     "build": "rm -rf dist && webpack --config webpack/webpackConfigProd.js && cp -R static/* dist && cp _redirects-prod dist/_redirects",
-    "prod": "serve ./dist -s",
+    "prod": "npm run build && serve ./dist -s",
     "start": "webpack-dev-server --config webpack/webpackConfigDev.js"
   },
   "dependencies": {
