@@ -18,7 +18,7 @@ class Waves extends Component {
 				</Helmet>
 
 				<h1>Waves</h1>
-				<img src={'images/waves.png'} alt={'Waves'} />
+				<img width={'150px'} src={'images/waves.png'} alt={'Waves'} />
 				<div>{JSON.stringify(this.props.appData)}</div>
 			</div>
 		);

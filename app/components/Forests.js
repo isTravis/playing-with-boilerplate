@@ -18,7 +18,7 @@ class Forests extends Component {
 				</Helmet>
 
 				<h1>Forests</h1>
-				<img src={'images/forest.jpg'} alt={'forests'} />
+				<img width={'150px'} src={'images/forest.jpg'} alt={'forests'} />
 				<div>{JSON.stringify(this.props.appData)}</div>
 			</div>
 		);
