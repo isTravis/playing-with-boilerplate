@@ -12,6 +12,7 @@
   "scripts": {
     "build": "rm -rf dist && webpack --config webpack/webpackConfigProd.js && cp -R static/* dist && cp _redirects-prod dist/_redirects",
     "prod": "npm run build && serve ./dist -s",
+    "lint": "eslint app webpack",
     "start": "webpack-dev-server --config webpack/webpackConfigDev.js"
   },
   "dependencies": {
@@ -35,6 +36,7 @@
     "extract-text-webpack-plugin": "^2.1.0",
     "html-webpack-plugin": "^2.24.1",
     "node-sass": "^4.5.2",
+    "normalize.css": "^7.0.0",
     "prop-types": "^15.5.10",
     "react": "^15.5.4",
     "react-code-splitting": "^1.1.1",

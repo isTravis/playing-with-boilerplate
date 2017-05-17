@@ -1,9 +1,8 @@
 /* eslint-disable import/prefer-default-export */
 
 export const apiFetch = function(path, opts) {
-	const urlPrefix = 'https://dev.pubpub.org';
-	// const finalRoute = urlPrefix + path;
-	const finalRoute = `https://api.github.com/users/${path}/orgs`;
+	const urlPrefix = 'https://api.github.com/users';
+	const finalRoute = `${urlPrefix}/${path}/orgs`;
 
 	return fetch(finalRoute, {
 		...opts,

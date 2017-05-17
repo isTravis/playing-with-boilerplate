@@ -2,32 +2,31 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import { connect } from 'react-redux';
-import { Link } from 'react-router-dom';
 import { getData } from 'actions/app';
 
-class Waves extends Component {
+class Forests extends Component {
 	componentWillMount() {
-		this.props.dispatch(getData('333fred'));
+		this.props.dispatch(getData('isTravis'));
 	}
 
 	render() {
 		return (
 			<div className={'page'}>
 				<Helmet>
-					<title>Waves</title>
+					<title>Forests</title>
 				</Helmet>
 
-				<h1>Waves</h1>
-				<img width={'150px'} src={'images/waves.png'} alt={'Waves'} />
+				<h1>Forests</h1>
+				<img width={'150px'} src={'images/forest.jpg'} alt={'forests'} />
 				<div>{JSON.stringify(this.props.appData)}</div>
 			</div>
 		);
 	}
 }
 
-Waves.propTypes = {
+Forests.propTypes = {
 	dispatch: PropTypes.func.isRequired,
-	appData: PropTypes.object,
+	appData: PropTypes.object.isRequired,
 };
 
-export default connect(state => ({ appData: state.app }))(Waves);
+export default connect(state => ({ appData: state.app }))(Forests);

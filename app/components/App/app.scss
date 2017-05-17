@@ -1,0 +1,26 @@
+@import "~normalize.css";
+@import "./appLoading.scss";
+
+body {
+	margin: 0;
+	padding: 0;
+	width: 100vw;
+	overflow-x: hidden;
+	background-color: #f3f3f4;
+	font-family: -apple-system, "BlinkMacSystemFont", "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.no-script {
+	display: block;
+	padding: 2em;
+	text-align: center;
+}
+
+h1 {
+	font-size: 2em;
+}
+
+.page {
+	padding: 0em 2em;
+	word-break: break-all;
+}

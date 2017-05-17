@@ -6,9 +6,9 @@ import { apiFetch } from 'utilities';
 // All action types are defined as constants. Do not manually pass action
 // types as strings in action creators
 /*--------*/
-export const LOGIN_GET_LOAD = 'app/LOGIN_GET_LOAD';
-export const LOGIN_GET_SUCCESS = 'app/LOGIN_GET_SUCCESS';
-export const LOGIN_GET_FAIL = 'app/LOGIN_GET_FAIL';
+export const GET_DATA_LOAD = 'app/GET_DATA_LOAD';
+export const GET_DATA_SUCCESS = 'app/GET_DATA_SUCCESS';
+export const GET_DATA_FAIL = 'app/GET_DATA_FAIL';
 
 /*--------*/
 // Define Action creators
@@ -19,13 +19,13 @@ export const LOGIN_GET_FAIL = 'app/LOGIN_GET_FAIL';
 /*--------*/
 export function getData(user) {
 	return (dispatch) => {
-		dispatch({ type: LOGIN_GET_LOAD });
+		dispatch({ type: GET_DATA_LOAD });
 		return apiFetch(user)
 		.then((result) => {
-			dispatch({ type: LOGIN_GET_SUCCESS, result });
+			dispatch({ type: GET_DATA_SUCCESS, result });
 		})
 		.catch((error) => {
-			dispatch({ type: LOGIN_GET_FAIL, error });
+			dispatch({ type: GET_DATA_FAIL, error });
 		});
 	};
 }

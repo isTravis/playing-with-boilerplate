@@ -3,8 +3,8 @@ import { Provider } from 'react-redux';
 import { render } from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
 
-import App from 'components/App';
-import ManageScroll from 'components/ManageScroll';
+import App from 'components/App/App';
+import ManageScroll from 'components/ManageScroll/ManageScroll';
 import store from './store';
 
 require('./manageServiceWorker');
