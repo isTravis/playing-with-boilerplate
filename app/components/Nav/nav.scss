@@ -2,7 +2,8 @@
 	height: 50px;
 
 	.navbar {
-		background-color: white;
+		background-color: $navBackground;
+		color: $navColor;
 		height: 50px;
 		line-height: 50px;	
 		padding: 0em 1em;

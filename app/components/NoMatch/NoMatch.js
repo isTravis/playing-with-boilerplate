@@ -1,8 +1,6 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 
-require('./nomatch.scss');
-
 const NoMatch = function() {
 	return (
 		<div id={'nomatch-page'}>

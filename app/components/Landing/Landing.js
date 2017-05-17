@@ -1,8 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-require('./landing.scss');
-
 const Landing = function() {
 	return (
 		<div id={'landing-page'}>
@@ -22,6 +20,5 @@ const Landing = function() {
 		</div>
 	);
 };
-
 
 export default Landing;

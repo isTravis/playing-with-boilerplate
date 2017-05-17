@@ -1,8 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-require('./navbar.scss');
-
 const NavBar = function() {
 	const toggleSlide = function() {
 		const elem = document.getElementsByClassName('nav-menu')[0];
