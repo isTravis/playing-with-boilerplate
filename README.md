@@ -70,4 +70,4 @@ Raven is useful for capturing client-side errors.
 
 **To configure:** Set the id on BrowserRouter in `app/index.js` with your GA id
 
-*To remove:* Uninstall react-g-analytics from npm packages. Use `{ BrowserRouter } from 'react-router-dom'`, rather than `from 'react-g-analytics'`. Remove the id parameter from BrowserRouter component in `app/index.js`
+*To remove:** Uninstall react-g-analytics from npm packages. Use `{ BrowserRouter } from 'react-router-dom'`, rather than `from 'react-g-analytics'`. Remove the id parameter from BrowserRouter component in `app/index.js`
