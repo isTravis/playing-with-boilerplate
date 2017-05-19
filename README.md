@@ -62,12 +62,12 @@ Be sure to update the following locations
 
 Raven is useful for capturing client-side errors.
 
-*To configure:* Set the Raven-URI in app/index.js
+**To configure:** Set the Raven-URI in app/index.js
 
-*To remove:* Remove the Raven-URI line in `app/index.js` and remove the script import in `webpack/template.html`
+**To remove:** Remove the Raven-URI line in `app/index.js` and remove the script import in `webpack/template.html`
 
 ## Google Analytics
 
-*To configure:* Set the id on BrowserRouter in `app/index.js` with your GA id
+**To configure:** Set the id on BrowserRouter in `app/index.js` with your GA id
 
 *To remove:* Uninstall react-g-analytics from npm packages. Use `{ BrowserRouter } from 'react-router-dom'`, rather than `from 'react-g-analytics'`. Remove the id parameter from BrowserRouter component in `app/index.js`
