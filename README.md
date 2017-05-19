@@ -39,7 +39,7 @@ npm run prod
 Static files such as images, robots.txt, manifest.json, etc are stored in the /static folder. The contents of this folder are copied to the /dist folder during the production build. The contents, not the folder itself, are copied, so that robots.txt, etc will be at the top-level of the deployed application.
 
 # Server-Side Rendering
-After lots of thought and research, this start pack does not support server-side rendering. A mixture of challenges with async data loading on server/client, slow performance of renderToString, and complexities with sw-precache implementation led me to choose not to implement SSR. 
+After lots of thought and research, this starter pack does not support server-side rendering. A mixture of challenges with async data loading on server/client, slow performance of renderToString, and complexities with sw-precache implementation led me to choose not to implement SSR. 
 
 Furthermore, with sw-precache, after first load (in Chrome and Android), the app shell is available and first paint occurs almost instantly. So, while SSR would be really nice for first-paint, the offline cache provides similar benefits without the server costs and code complexity.
 
