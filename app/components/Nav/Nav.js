@@ -14,7 +14,7 @@ const NavBar = function() {
 	return (
 		<div className="navbar-page">
 			<div className={'navbar'}>
-				<Link to={'/'}>Open Knowledge</Link>
+				<Link to={'/'}>React Starter 17</Link>
 				<a role={'button'} tabIndex={0} className={'right'} onClick={toggleSlide}>Menu</a>
 
 				<div role={'presentation'} className={'nav-menu'} onClick={toggleSlide}>
