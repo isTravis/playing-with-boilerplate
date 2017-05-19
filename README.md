@@ -2,6 +2,8 @@
 
 A React starter repo, first assembled in 2017, featuring:
 
+Auto-deployed from Master to demo at: [https://react-starter-17.netlify.com](https://react-starter-17.netlify.com)
+
 - React
 - Redux
 - React Router 4
