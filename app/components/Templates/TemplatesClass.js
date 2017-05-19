@@ -7,6 +7,11 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { getData } from 'actions/app';
 
+const propTypes = {
+	dispatch: PropTypes.func.isRequired,
+	appData: PropTypes.object.isRequired,
+};
+
 class Template extends Component {
 	componentWillMount() {
 		this.props.dispatch(getData());
@@ -22,9 +27,5 @@ class Template extends Component {
 	}
 }
 
-Template.propTypes = {
-	dispatch: PropTypes.func.isRequired,
-	appData: PropTypes.object.isRequired,
-};
-
+Template.propTypes = propTypes;
 export default connect(state => ({ appData: state.app }))(Template);

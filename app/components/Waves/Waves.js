@@ -4,6 +4,11 @@ import Helmet from 'react-helmet';
 import { connect } from 'react-redux';
 import { getData } from 'actions/app';
 
+const propTypes = {
+	dispatch: PropTypes.func.isRequired,
+	appData: PropTypes.object.isRequired,
+};
+
 class Waves extends Component {
 	componentWillMount() {
 		this.props.dispatch(getData('333fred'));
@@ -24,9 +29,5 @@ class Waves extends Component {
 	}
 }
 
-Waves.propTypes = {
-	dispatch: PropTypes.func.isRequired,
-	appData: PropTypes.object.isRequired,
-};
-
+Waves.propTypes = propTypes;
 export default connect(state => ({ appData: state.app }))(Waves);

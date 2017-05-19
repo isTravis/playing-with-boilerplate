@@ -4,6 +4,11 @@ import Helmet from 'react-helmet';
 import { connect } from 'react-redux';
 import { getData } from 'actions/app';
 
+const propTypes = {
+	dispatch: PropTypes.func.isRequired,
+	appData: PropTypes.object.isRequired,
+};
+
 class Forests extends Component {
 	componentWillMount() {
 		this.props.dispatch(getData('isTravis'));
@@ -24,9 +29,5 @@ class Forests extends Component {
 	}
 }
 
-Forests.propTypes = {
-	dispatch: PropTypes.func.isRequired,
-	appData: PropTypes.object.isRequired,
-};
-
+Forests.propTypes = propTypes;
 export default connect(state => ({ appData: state.app }))(Forests);
