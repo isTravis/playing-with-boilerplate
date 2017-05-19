@@ -71,11 +71,11 @@ module.exports = {
 		}),
 		new HtmlWebpackPlugin({
 			filename: 'index.html',
-			title: 'redux-react-starter',
+			title: 'react-starter-17',
 			template: 'webpack/template.html',
 		}),
 		new SWPrecacheWebpackPlugin({
-			cacheId: 'my-project-name',
+			cacheId: 'react-starter-17',
 			filename: 'service-worker.js', // This name is referenced in manageServiceWorker.js
 			maximumFileSizeToCacheInBytes: 4194304,
 			minify: true,

@@ -1,13 +1,13 @@
 {
-  "name": "react-app-starter",
+  "name": "react-starter-17",
   "version": "0.0.1",
-  "description": "React App Starter",
+  "description": "React Starter 17",
   "main": "server.js",
-  "author": "Travis Rich <reactapp@travisrich.com>",
+  "author": "Travis Rich <reactstarter17@travisrich.com>",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/isTravis/react-app-starter.git"
+    "url": "https://github.com/isTravis/react-starter-17.git"
   },
   "scripts": {
     "build": "rm -rf dist && webpack --config webpack/webpackConfigProd.js && cp -R static/* dist && cp _redirects-prod dist/_redirects",

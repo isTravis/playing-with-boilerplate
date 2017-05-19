@@ -1,6 +1,6 @@
-# React App Starter
+# React Starter 17
 
-A React starter repo, featuring:
+A React starter repo, first assembled in 2017, featuring:
 
 - React
 - Redux
@@ -8,9 +8,11 @@ A React starter repo, featuring:
 - Webpack 2 with route chunking, vendor chunking
 - Offline support and caching with sw-precache
 - SASS compilation to static file, loading in head of HTML
+- Hot Realoading of Components and CSS
 - Sentry.io reporting with Raven
 - Google Analytics
 - Async actions using fetch and redux-thunk
+- React Helmet for metadata
 
 ## To Install
 
@@ -30,7 +32,18 @@ npm start
 npm run prod
 ```
 
+# Static Files
 
+Static files such as images, robots.txt, manifest.json, etc are stored in the /static folder. The contents of this folder are copied to the /dist folder during the production build. The contents, not the folder itself, are copied, so that robots.txt, etc will be at the top-level of the deployed application.
+
+# Server-Side Rendering
+After lots of thought and research, this start pack does not support server-side rendering. A mixture of challenges with async data loading on server/client, slow performance of renderToString, and complexities with sw-precache implementation led me to choose not to implement SSR. 
+
+Furthermore, with sw-precache, after first load (in Chrome and Android), the app shell is available and first paint occurs almost instantly. So, while SSR would be really nice for first-paint, the offline cache provides similar benefits without the server costs and code complexity.
+
+For SEO, I choose to pre-render (Netlify offers pre-rendering for free on open-source applications).
+
+React Fiber may bring better renderToString performance, streaming, etc - at which point I may revisit the question. 
 
 # Config
 
