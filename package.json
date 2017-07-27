@@ -55,6 +55,6 @@
     "webpack-dev-server": "^2.4.5"
   },
   "engines": {
-    "node": "6.2.2"
+    "node": "8.2.1"
   }
 }
